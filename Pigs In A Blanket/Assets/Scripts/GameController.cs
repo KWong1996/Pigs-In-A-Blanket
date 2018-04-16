@@ -2,19 +2,41 @@
 using System.Collections;
 using UnityEngine.UI;
 using System;
-
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour {
 
     public Text timerLabel;
     private float time;
     private float timeRemaining;
-    private float allowedTime = 240;
-    private int allowedMinutes = 240 / 60;
+    private float allowedTime = 5;
+    private int allowedMinutes = 0 / 60;
+
+    public Text numPlayers;
 
     public void Start()
     {
         //Instantiate appropriate number of players
+        if (GameStats.playerCount == 1)
+        {
+
+        }
+        else if (GameStats.playerCount == 2)
+        {
+            
+        }
+        else if (GameStats.playerCount == 3)
+        {
+
+        }
+        else if (GameStats.playerCount == 4)
+        {
+
+        }
+        else
+        {
+
+        }
     }
 
     public void Update()
@@ -41,9 +63,9 @@ public class GameController : MonoBehaviour {
         }
 
         //Check for end of game
-        if (secondsRemaining == 0)
+        if (secondsRemaining <= 0 && minutesRemaining <= 0)
         {
-
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
 
     }

@@ -202,6 +202,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerLabel: {fileID: 69171574}
+  numPlayers: {fileID: 0}
 --- !u!1 &82273673 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1491614538394874, guid: 42c8301a91a3c4742ac475b6eec20fa6,
@@ -2517,6 +2518,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerLabel: {fileID: 69171574}
+  numPlayers: {fileID: 0}
 --- !u!4 &1740673582
 Transform:
   m_ObjectHideFlags: 0
