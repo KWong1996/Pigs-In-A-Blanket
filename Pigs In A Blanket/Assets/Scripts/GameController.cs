@@ -9,10 +9,15 @@ public class GameController : MonoBehaviour {
     public Text timerLabel;
     private float time;
     private float timeRemaining;
-    private float allowedTime = 5;
-    private int allowedMinutes = 0 / 60;
+    private float allowedTime = 10;
+    private int allowedMinutes = 240 / 60;
 
     public Text numPlayers;
+
+    public GameObject P1;
+    public GameObject P2;
+    public GameObject P3;
+    public GameObject P4;
 
     public void Start()
     {
@@ -20,18 +25,32 @@ public class GameController : MonoBehaviour {
         if (GameStats.playerCount == 1)
         {
 
+            P1.SetActive(true);
+            P2.SetActive(false);
+            P3.SetActive(false);
+            P4.SetActive(false);
+
         }
         else if (GameStats.playerCount == 2)
         {
-            
+            P1.SetActive(true);
+            P2.SetActive(true);
+            P3.SetActive(false);
+            P4.SetActive(false);
         }
         else if (GameStats.playerCount == 3)
         {
-
+            P1.SetActive(true);
+            P2.SetActive(true);
+            P3.SetActive(true);
+            P4.SetActive(false);
         }
         else if (GameStats.playerCount == 4)
         {
-
+            P1.SetActive(true);
+            P2.SetActive(true);
+            P3.SetActive(true);
+            P4.SetActive(true);
         }
         else
         {
@@ -79,5 +98,4 @@ public class GameController : MonoBehaviour {
     {
 
     }
-
 }

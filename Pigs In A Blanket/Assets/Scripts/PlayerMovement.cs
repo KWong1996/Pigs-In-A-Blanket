@@ -5,8 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerMovement: MonoBehaviour {
 
-	public float speed;
-
+	public float speed = 30;
 
     public Text scoreText;
     public Text truffleCount;
@@ -58,5 +57,6 @@ public class PlayerMovement: MonoBehaviour {
     void UpdateScore()
     {   
         scoreText.text = "Score: " + score;
+        GameStats.player1Score = score;
     }
 }
