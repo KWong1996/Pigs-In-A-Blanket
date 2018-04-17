@@ -8,6 +8,7 @@ TagManager:
   - Truffle
   - Chest
   - Player 2
+  - ChestPrime
   layers:
   - Default
   - TransparentFX

@@ -23,8 +23,8 @@ public class PlayerMovement: MonoBehaviour {
 	}
 
 	void FixedUpdate(){
-		float moveHorizontal = Input.GetAxis ("Horizontal_P1");
-		float moveVertical = Input.GetAxis ("Vertical_P1");
+		float moveHorizontal = Input.GetAxis ("Horizontal");
+		float moveVertical = Input.GetAxis ("Vertical");
 
         bool p1_powerup_1 = Input.GetButtonDown("P1_PowerUp_1");
 

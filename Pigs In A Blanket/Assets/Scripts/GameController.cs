@@ -9,7 +9,7 @@ public class GameController : MonoBehaviour {
     public Text timerLabel;
     private float time;
     private float timeRemaining;
-    private float allowedTime = 10;
+    private float allowedTime = 240;
     private int allowedMinutes = 240 / 60;
 
     public Text numPlayers;
@@ -19,6 +19,9 @@ public class GameController : MonoBehaviour {
     public GameObject P3;
     public GameObject P4;
 
+	public Sprite openChest = Resources.Load<Sprite>("chestsOpen");
+	public Sprite closedChest = Resources.Load<Sprite>("chestsClosed");
+	public Sprite truffle = Resources.Load<Sprite>("truffle");
     public void Start()
     {
         //Instantiate appropriate number of players
@@ -60,10 +63,11 @@ public class GameController : MonoBehaviour {
 
     public void Update()
     {
-        startTimer();
+        int secondsRemaining = startTimer();
+		openChests(secondsRemaining);
     }
 
-    void startTimer()
+    int startTimer()
     {
 
         time += Time.deltaTime;
@@ -86,8 +90,22 @@ public class GameController : MonoBehaviour {
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
+		return (int)allowedTime;
 
     }
+
+	void openChests(int timePass)
+	{
+		GameObject[] chests;
+		if (timePass%15 == 0) {
+			chests = GameObject.FindGameObjectsWithTag("Chest");
+			foreach (GameObject chest in chests)
+			{
+				SpriteRenderer spriteR = chest.GetComponent<SpriteRenderer>();
+				spriteR.sprite = Resources.LoadAll<Sprite>("chests")[1];
+			}
+		}
+	}
 
     void spawnTruffles()
     {
