@@ -23,10 +23,22 @@ public class PlayerMovement: MonoBehaviour {
 	}
 
 	void FixedUpdate(){
-		float moveHorizontal = Input.GetAxis ("Horizontal");
-		float moveVertical = Input.GetAxis ("Vertical");
-		Vector2 movement = new Vector2 (moveHorizontal,moveVertical);
+		float moveHorizontal = Input.GetAxis ("Horizontal_P1");
+		float moveVertical = Input.GetAxis ("Vertical_P1");
+
+        bool p1_powerup_1 = Input.GetButtonDown("P1_PowerUp_1");
+
+        Vector2 movement = new Vector2 (moveHorizontal,moveVertical);
 		rb2d.AddForce (movement * speed);
+
+
+        if (p1_powerup_1)
+        {
+            Application.Quit();
+        }
+
+
+
 	}
 
     void OnTriggerEnter2D(Collider2D other)
