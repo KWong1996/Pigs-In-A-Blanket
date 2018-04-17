@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Pigs
+  - Truffle
+  - Chest
+  - Player 2
   layers:
   - Default
   - TransparentFX
