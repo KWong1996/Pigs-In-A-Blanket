@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pigs In A Blanket (1)", "Pigs In A Blanket (1).csproj", "{7147FBB5-5FB5-680E-25E7-02EAC7591254}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pigs In A Blanket (1).Editor", "Pigs In A Blanket (1).Editor.csproj", "{375A6CBE-9527-0693-7A7A-CECC518ED26F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7147FBB5-5FB5-680E-25E7-02EAC7591254}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7147FBB5-5FB5-680E-25E7-02EAC7591254}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7147FBB5-5FB5-680E-25E7-02EAC7591254}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7147FBB5-5FB5-680E-25E7-02EAC7591254}.Release|Any CPU.Build.0 = Release|Any CPU
+		{375A6CBE-9527-0693-7A7A-CECC518ED26F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{375A6CBE-9527-0693-7A7A-CECC518ED26F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{375A6CBE-9527-0693-7A7A-CECC518ED26F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{375A6CBE-9527-0693-7A7A-CECC518ED26F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

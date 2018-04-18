@@ -63,7 +63,7 @@ public class PlayerMovement: MonoBehaviour {
             other.gameObject.SetActive(false);
         }
 
-        if (other.gameObject.CompareTag("Chest"))
+		if (other.gameObject.CompareTag("Chest") || other.gameObject.CompareTag("ChestPrime"))
         {   
             score += numTruffles;
             numTruffles = 0;
